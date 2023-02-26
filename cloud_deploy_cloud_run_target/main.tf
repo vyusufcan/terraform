@@ -3,7 +3,7 @@ resource "google_clouddeploy_target" "cloud_run_target" {
   name     = var.cloud_deploy_target_name
 
   project          = var.project_name
-  require_approval = false
+  require_approval = var.require_approval
 
   run {
     location = var.cloud_run_location
